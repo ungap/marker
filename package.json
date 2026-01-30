@@ -1,6 +1,6 @@
 {
   "name": "@ungap/marker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A marker for the Web",
   "exports": {
     "./pi": "./pi.js",
