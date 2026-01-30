@@ -1,0 +1,18 @@
+{
+  "name": "@ungap/marker",
+  "version": "0.0.0",
+  "description": "A marker for the Web",
+  "exports": {
+    "./pi": "./pi.js",
+    "./comment": "./comment.js",
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "marker",
+    "polyfill",
+    "html"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "MIT",
+  "type": "module"
+}
