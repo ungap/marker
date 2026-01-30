@@ -14,5 +14,13 @@
   ],
   "author": "Andrea Giammarchi",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungap/marker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ungap/marker/issues"
+  },
+  "homepage": "https://github.com/ungap/marker#readme"
 }
