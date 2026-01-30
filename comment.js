@@ -5,6 +5,10 @@ import custom from 'https://esm.run/custom-function/factory';
 
 /** @typedef {'marker' | 'start' | 'end'} MarkerType */
 
+const ungap = Symbol.for('@ungap/marker');
+
+let Marker = globalThis.Marker ?? globalThis[ungap];
+
 if (!('MARKER_NODE' in Node)) {
   const { COMMENT_NODE, ELEMENT_NODE } = Node;
   const MARKER_NODE = 13;
@@ -32,7 +36,7 @@ if (!('MARKER_NODE' in Node)) {
 
   let promoted;
 
-  class Marker extends custom(Node) {
+  Marker = globalThis[ungap] = class Marker extends custom(Node) {
     /** @type {string} */
     #name;
 
@@ -138,3 +142,5 @@ if (!('MARKER_NODE' in Node)) {
   mo.observe(documentElement, mode);
   walk(documentElement);
 }
+
+export default Marker;
